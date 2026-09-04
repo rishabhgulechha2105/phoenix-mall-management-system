@@ -1,0 +1,633 @@
+/* =========================================================
+   PHOENIX REPORTS
+========================================================= */
+
+.reports-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 42px 0 34px;
+  border-bottom: 1px solid #e6e2dc;
+}
+
+.reports-intro h2 {
+  margin: 7px 0 10px;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -1.8px;
+  font-weight: 700;
+}
+
+.reports-description {
+  max-width: 620px;
+  margin: 0;
+  color: #77736d;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.reports-mark {
+  font-size: 86px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -7px;
+  color: #ece8e1;
+  user-select: none;
+}
+
+.reports-mark span {
+  color: #c9c1b6;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.reports-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.reports-stat-card {
+  min-height: 155px;
+  padding: 21px;
+  background: #ffffff;
+  border: 1px solid #e7e3dd;
+  border-radius: 4px;
+}
+
+.reports-stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.reports-stat-top span:first-child {
+  color: #8a857e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.reports-stat-symbol {
+  color: #a49d93;
+  font-size: 18px;
+}
+
+.reports-stat-card strong {
+  display: block;
+  color: #1f1d1a;
+  font-size: 27px;
+  letter-spacing: -0.8px;
+}
+
+.reports-stat-card p {
+  margin: 7px 0 0;
+  color: #99938b;
+  font-size: 11px;
+}
+
+/* =========================================================
+   GENERAL CARDS
+========================================================= */
+
+.reports-overview-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.reports-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.reports-card {
+  background: #ffffff;
+  border: 1px solid #e7e3dd;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.reports-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.reports-card-eyebrow {
+  margin: 0 0 6px;
+  color: #a09a91;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.reports-card-header h3 {
+  margin: 0;
+  color: #24211e;
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.4px;
+}
+
+.reports-card-icon {
+  color: #a49d94;
+  font-size: 19px;
+}
+
+.reports-card-count {
+  color: #99938b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   OCCUPANCY
+========================================================= */
+
+.occupancy-report-number {
+  margin-bottom: 15px;
+  color: #22201d;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.occupancy-report-bar {
+  width: 100%;
+  height: 7px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  background: #eeebe6;
+  border-radius: 20px;
+}
+
+.occupancy-report-bar div {
+  height: 100%;
+  background: #292724;
+  border-radius: inherit;
+}
+
+.occupancy-report-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.occupancy-report-grid div {
+  padding: 13px 10px;
+  background: #f7f5f2;
+  text-align: center;
+}
+
+.occupancy-report-grid strong {
+  display: block;
+  color: #282522;
+  font-size: 20px;
+}
+
+.occupancy-report-grid span {
+  display: block;
+  margin-top: 4px;
+  color: #99938b;
+  font-size: 9px;
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   TRANSACTION HEALTH
+========================================================= */
+
+.transaction-report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.transaction-report-item {
+  padding: 22px 18px;
+  background: #f7f5f2;
+}
+
+.transaction-report-item strong {
+  display: block;
+  color: #24211e;
+  font-size: 24px;
+  letter-spacing: -0.6px;
+}
+
+.transaction-report-item span {
+  display: block;
+  margin-top: 5px;
+  color: #918b83;
+  font-size: 10px;
+}
+
+/* =========================================================
+   MONTHLY COLLECTIONS
+========================================================= */
+
+.monthly-report-card {
+  margin-bottom: 16px;
+}
+
+.monthly-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  min-height: 290px;
+  padding: 10px 10px 0;
+  overflow-x: auto;
+}
+
+.monthly-column {
+  min-width: 92px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.monthly-value {
+  min-height: 30px;
+  margin-bottom: 7px;
+  color: #3c3935;
+  font-size: 10px;
+  font-weight: 650;
+  text-align: center;
+}
+
+.monthly-bar-container {
+  width: 42px;
+  height: 190px;
+  display: flex;
+  align-items: flex-end;
+  background: #f0ede8;
+  border-radius: 3px 3px 0 0;
+}
+
+.monthly-bar {
+  width: 100%;
+  min-height: 4px;
+  background: #292724;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.3s ease;
+}
+
+.monthly-label {
+  margin-top: 9px;
+  color: #69645e;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.monthly-transactions {
+  margin-top: 3px;
+  color: #aaa49b;
+  font-size: 9px;
+}
+
+/* =========================================================
+   STATUS REPORTS
+========================================================= */
+
+.report-status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.report-status-row {
+  width: 100%;
+}
+
+.report-status-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.report-status-info span {
+  color: #5f5a54;
+  font-size: 11px;
+}
+
+.report-status-info strong {
+  color: #292724;
+  font-size: 12px;
+}
+
+.report-status-bar {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  background: #efebe6;
+  border-radius: 10px;
+}
+
+.report-status-bar div {
+  height: 100%;
+  background: #373430;
+  border-radius: inherit;
+}
+
+/* =========================================================
+   PAYMENT ANALYSIS
+========================================================= */
+
+.payment-analysis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.payment-analysis-item {
+  position: relative;
+}
+
+.payment-analysis-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.payment-analysis-top div {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-analysis-top div strong {
+  color: #302d29;
+  font-size: 12px;
+}
+
+.payment-analysis-top div span {
+  margin-top: 4px;
+  color: #9b958d;
+  font-size: 9px;
+}
+
+.payment-analysis-top > strong {
+  color: #302d29;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.payment-analysis-bar {
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  background: #efebe6;
+  border-radius: 10px;
+}
+
+.payment-analysis-bar div {
+  height: 100%;
+  background: #3a3733;
+  border-radius: inherit;
+}
+
+.payment-analysis-percentage {
+  display: block;
+  margin-top: 6px;
+  color: #aaa49b;
+  font-size: 9px;
+  text-align: right;
+}
+
+/* =========================================================
+   SHOP SEARCH
+========================================================= */
+
+.reports-shop-search {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 0 13px;
+  background: #f8f6f3;
+  border: 1px solid #e5e1db;
+  border-radius: 3px;
+}
+
+.reports-shop-search span {
+  color: #99938b;
+  font-size: 17px;
+}
+
+.reports-shop-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #393632;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.reports-shop-search input::placeholder {
+  color: #aaa49b;
+}
+
+/* =========================================================
+   SHOP PERFORMANCE
+========================================================= */
+
+.shop-performance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.shop-performance-row {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.shop-rank {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2efeb;
+  color: #625d56;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.shop-performance-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.shop-performance-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-performance-info div strong {
+  color: #302d29;
+  font-size: 12px;
+}
+
+.shop-performance-info div span {
+  margin-top: 4px;
+  color: #9a948c;
+  font-size: 9px;
+}
+
+.shop-performance-info > strong {
+  color: #302d29;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.shop-performance-bar {
+  grid-column: 2;
+  width: 100%;
+  height: 6px;
+  margin-top: 8px;
+  overflow: hidden;
+  background: #efebe6;
+  border-radius: 10px;
+}
+
+.shop-performance-bar div {
+  height: 100%;
+  background: #393632;
+  border-radius: inherit;
+}
+
+.shop-transaction-count {
+  grid-column: 2;
+  margin-top: 4px;
+  color: #aaa49b;
+  font-size: 9px;
+  text-align: right;
+}
+
+/* =========================================================
+   EMPTY STATES
+========================================================= */
+
+.reports-empty {
+  padding: 30px 10px;
+  color: #99938b;
+  font-size: 12px;
+  text-align: center;
+  background: #f8f6f3;
+}
+
+/* =========================================================
+   SUMMARY STRIP
+========================================================= */
+
+.reports-summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 16px;
+  background: #dedad4;
+  border: 1px solid #dedad4;
+}
+
+.reports-summary-strip > div {
+  padding: 22px;
+  background: #ffffff;
+}
+
+.reports-summary-strip span {
+  display: block;
+  margin-bottom: 8px;
+  color: #99938b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.reports-summary-strip strong {
+  color: #2b2825;
+  font-size: 24px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .reports-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-analysis {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .reports-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .occupancy-report-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-summary-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-intro {
+    padding-top: 25px;
+  }
+
+  .reports-mark {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .reports-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-card {
+    padding: 18px;
+  }
+
+  .reports-intro h2 {
+    font-size: 34px;
+  }
+
+  .reports-summary-strip {
+    grid-template-columns: 1fr;
+  }
+}

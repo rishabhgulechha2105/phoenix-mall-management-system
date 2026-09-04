@@ -1,0 +1,529 @@
+.dining-page {
+  min-height: 100vh;
+  background: #f6f5f1;
+  color: #171717;
+}
+
+/* NAVBAR */
+
+.dining-navbar {
+  height: 88px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #171717;
+  color: white;
+}
+
+.dining-logo {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.dining-logo span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.dining-nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 13px;
+}
+
+.dining-nav-links a {
+  color: #aaa;
+  transition: 0.25s;
+}
+
+.dining-nav-links a:hover,
+.dining-nav-links a.active {
+  color: white;
+}
+
+.dining-login {
+  border: 1px solid #777;
+  padding: 10px 21px;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+/* HERO */
+
+.dining-hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2200&q=90")
+    center/cover;
+
+  color: white;
+}
+
+.dining-hero-content {
+  margin-left: 9%;
+  max-width: 650px;
+}
+
+.dining-eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.dining-hero h1 {
+  font-size: clamp(55px, 7vw, 95px);
+  line-height: 0.92;
+  letter-spacing: -4px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dining-hero h1 em {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+.dining-hero-content > p:last-child {
+  max-width: 470px;
+  color: #ddd;
+  line-height: 1.7;
+  margin-top: 30px;
+}
+
+/* MAIN */
+
+.dining-main {
+  padding: 110px 9% 130px;
+}
+
+.dining-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #777;
+  font-weight: 600;
+}
+
+.dining-heading h2 {
+  font-size: clamp(45px, 5vw, 65px);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -2px;
+  margin: 18px 0 0;
+}
+
+.dining-heading h2 em {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+.restaurant-count {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: #777;
+}
+
+.restaurant-count strong {
+  color: #171717;
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.restaurant-count span {
+  font-size: 13px;
+}
+
+/* SEARCH */
+
+.dining-search {
+  height: 64px;
+  background: white;
+  border: 1px solid #d5d3cd;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  margin-bottom: 30px;
+}
+
+.dining-search > span {
+  font-size: 27px;
+  color: #777;
+}
+
+.dining-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+.dining-search button {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #777;
+}
+
+/* FILTER */
+
+.dining-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 65px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #888;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.dining-filters button {
+  border: 1px solid #d4d2cc;
+  background: transparent;
+  padding: 9px 16px;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.dining-filters button:hover {
+  border-color: #171717;
+}
+
+.dining-filters button.selected {
+  background: #171717;
+  color: white;
+  border-color: #171717;
+}
+
+/* RESTAURANT GRID */
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.restaurant-card {
+  background: white;
+  border: 1px solid #e2e0da;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.09);
+}
+
+/* IMAGE */
+
+.restaurant-image {
+  height: 250px;
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #222,
+      #777
+    );
+}
+
+.restaurant-card:nth-child(2) .restaurant-image {
+  background:
+    linear-gradient(
+      135deg,
+      #555,
+      #aaa
+    );
+}
+
+.restaurant-card:nth-child(3) .restaurant-image {
+  background:
+    linear-gradient(
+      135deg,
+      #333,
+      #999
+    );
+}
+
+.restaurant-card:nth-child(4) .restaurant-image {
+  background:
+    linear-gradient(
+      135deg,
+      #777,
+      #222
+    );
+}
+
+.restaurant-number {
+  position: absolute;
+  top: 22px;
+  left: 25px;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.restaurant-price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+/* CONTENT */
+
+.restaurant-content {
+  padding: 32px;
+}
+
+.restaurant-cuisine {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0 0 10px;
+}
+
+.restaurant-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+
+.restaurant-description {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 450px;
+}
+
+.restaurant-details {
+  border-top: 1px solid #eee;
+  margin-top: 25px;
+  padding-top: 22px;
+  display: flex;
+  gap: 35px;
+}
+
+.restaurant-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.detail-label {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.restaurant-details span:last-child {
+  font-size: 11px;
+  color: #555;
+}
+
+.restaurant-arrow {
+  position: absolute;
+  right: 28px;
+  bottom: 27px;
+  font-size: 23px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: 0.3s;
+}
+
+.restaurant-card:hover .restaurant-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* LOADING */
+
+.dining-message {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #777;
+}
+
+.dining-loader {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ddd;
+  border-top-color: #171717;
+  border-radius: 50%;
+  animation: dining-spin 0.8s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes dining-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* EMPTY */
+
+.no-dining-results {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.no-dining-results > span {
+  font-size: 40px;
+}
+
+.no-dining-results h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.no-dining-results p {
+  color: #777;
+}
+
+.no-dining-results button {
+  margin-top: 15px;
+  border: 1px solid #171717;
+  background: #171717;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.dining-footer {
+  background: #111;
+  color: white;
+  padding: 70px 9% 30px;
+}
+
+.dining-footer-brand p {
+  max-width: 280px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.dining-footer-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 45px;
+  flex-wrap: wrap;
+}
+
+.dining-footer-links a {
+  color: #999;
+  font-size: 12px;
+}
+
+.dining-footer-links a:hover {
+  color: white;
+}
+
+.dining-footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 55px;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .dining-nav-links {
+    display: none;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dining-navbar {
+    height: 75px;
+  }
+
+  .dining-hero-content {
+    margin: 0 7%;
+  }
+
+  .dining-hero h1 {
+    font-size: 58px;
+  }
+
+  .dining-main {
+    padding: 75px 7%;
+  }
+
+  .dining-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .restaurant-details {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dining-footer {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .dining-footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

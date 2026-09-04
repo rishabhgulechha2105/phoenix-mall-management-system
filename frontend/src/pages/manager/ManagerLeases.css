@@ -1,0 +1,774 @@
+/* =========================================
+   LEASE PAGE
+========================================= */
+
+.lease-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 42px 48px 36px;
+  border-bottom: 1px solid #e7e4df;
+}
+
+.lease-page-header h2 {
+  margin: 8px 0 14px;
+  font-size: 42px;
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.lease-page-header h2 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.lease-description {
+  margin: 0;
+  max-width: 540px;
+  color: #77736d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.lease-header-mark {
+  padding-right: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 110px;
+  line-height: 0.8;
+  color: #e9e5df;
+}
+
+.lease-header-mark span {
+  color: #b7a58e;
+}
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.lease-toolbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  padding: 25px 48px;
+}
+
+.lease-search {
+  position: relative;
+  width: min(440px, 100%);
+}
+
+.lease-search input {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 0 42px;
+  border: 1px solid #ddd9d2;
+  border-radius: 4px;
+  background: #fff;
+  color: #292722;
+  font-size: 13px;
+  outline: none;
+}
+
+.lease-search input:focus {
+  border-color: #8f8170;
+}
+
+.lease-search input::placeholder {
+  color: #9a958e;
+}
+
+.lease-search-icon {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  color: #77736d;
+  font-size: 21px;
+}
+
+.lease-clear-search {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #77736d;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.lease-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lease-filter label {
+  color: #77736d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.lease-filter select {
+  height: 48px;
+  padding: 0 35px 0 13px;
+  border: 1px solid #ddd9d2;
+  border-radius: 4px;
+  background: white;
+  color: #45423c;
+  font-size: 12px;
+  outline: none;
+}
+
+.lease-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-left: auto;
+}
+
+.lease-count {
+  color: #77736d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.lease-add-button {
+  height: 46px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 3px;
+  background: #24231f;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.lease-add-button:hover {
+  background: #3b3934;
+}
+
+.lease-add-button span {
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: -1px;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.lease-error {
+  margin: 0 48px 20px;
+  padding: 13px 16px;
+  border: 1px solid #e6caca;
+  background: #fff5f5;
+  color: #9b4545;
+  font-size: 13px;
+}
+
+.lease-error span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #9b4545;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.lease-table-card {
+  margin: 0 48px;
+  overflow: hidden;
+  border: 1px solid #e4e0da;
+  border-radius: 5px;
+  background: white;
+}
+
+.lease-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 26px;
+  border-bottom: 1px solid #e8e4de;
+}
+
+.lease-table-header h3 {
+  margin: 5px 0 0;
+  color: #282620;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.lease-total-label {
+  color: #8d8982;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.lease-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.lease-table {
+  width: 100%;
+  min-width: 1120px;
+  border-collapse: collapse;
+}
+
+.lease-table th {
+  padding: 15px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e4e0da;
+  background: #f8f6f3;
+  color: #77736d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.lease-table td {
+  padding: 17px 18px;
+  border-bottom: 1px solid #ece9e4;
+  color: #36342f;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.lease-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.lease-table tbody tr:hover {
+  background: #fbfaf8;
+}
+
+/* =========================================
+   LEASE NUMBER
+========================================= */
+
+.lease-number strong {
+  display: block;
+  color: #282620;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.lease-number span {
+  display: block;
+  margin-top: 5px;
+  color: #99948d;
+  font-size: 9px;
+}
+
+/* =========================================
+   SHOP
+========================================= */
+
+.lease-shop strong {
+  display: block;
+  color: #36342f;
+  font-size: 12px;
+}
+
+.lease-shop span {
+  display: block;
+  margin-top: 5px;
+  color: #9a958e;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+}
+
+/* =========================================
+   TENANT
+========================================= */
+
+.lease-tenant strong {
+  display: block;
+  color: #36342f;
+  font-size: 12px;
+}
+
+.lease-tenant span {
+  display: block;
+  max-width: 155px;
+  margin-top: 5px;
+  overflow: hidden;
+  color: #9a958e;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================
+   PERIOD
+========================================= */
+
+.lease-period {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  color: #5f5a53;
+  font-size: 10px;
+}
+
+.period-arrow {
+  color: #aaa39a;
+}
+
+/* =========================================
+   RENT
+========================================= */
+
+.lease-rent {
+  display: block;
+  color: #35322d;
+  font-size: 12px;
+}
+
+.rent-label {
+  display: block;
+  margin-top: 4px;
+  color: #a19b93;
+  font-size: 9px;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.lease-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 9px;
+  border-radius: 20px;
+  background: #f0eee9;
+  color: #625d55;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.lease-status.active {
+  background: #edf3ed;
+  color: #557257;
+}
+
+.lease-status.expiring-soon {
+  background: #f7f0e4;
+  color: #957344;
+}
+
+.lease-status.expired {
+  background: #f0eeee;
+  color: #817878;
+}
+
+.lease-status.terminated {
+  background: #f8eaea;
+  color: #9a5252;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.lease-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.lease-edit-button,
+.lease-delete-button {
+  height: 31px;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+}
+
+.lease-edit-button {
+  border: 1px solid #d4cec5;
+  background: white;
+  color: #4d4942;
+}
+
+.lease-edit-button:hover {
+  background: #f3f0eb;
+}
+
+.lease-delete-button {
+  border: 1px solid #ead1d1;
+  background: white;
+  color: #a04b4b;
+}
+
+.lease-delete-button:hover {
+  background: #fff1f1;
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.lease-empty {
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.lease-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #f0ece7;
+  color: #766d62;
+  font-size: 22px;
+}
+
+.lease-empty h3 {
+  margin: 0 0 8px;
+  color: #2b2925;
+  font-size: 19px;
+}
+
+.lease-empty p {
+  margin: 0 0 20px;
+  color: #8a857e;
+  font-size: 13px;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.lease-back-button {
+  margin: 25px 48px 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #716a61;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+}
+
+.lease-back-button span {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.lease-back-button:hover {
+  color: #24231f;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.lease-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(25, 24, 21, 0.58);
+}
+
+.lease-modal {
+  width: min(720px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+.lease-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 27px 30px 24px;
+  border-bottom: 1px solid #e7e3dd;
+}
+
+.lease-modal-header h2 {
+  margin: 7px 0;
+  color: #282620;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.lease-modal-header p:last-child {
+  margin: 0;
+  color: #88837c;
+  font-size: 12px;
+}
+
+.lease-modal-close {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: #777169;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.lease-modal-close:hover {
+  color: #22211e;
+}
+
+/* =========================================
+   MODAL ERROR
+========================================= */
+
+.lease-modal-error {
+  margin: 20px 30px 0;
+  padding: 12px 14px;
+  border: 1px solid #ead0d0;
+  background: #fff4f4;
+  color: #9d4b4b;
+  font-size: 12px;
+}
+
+.lease-modal-error span {
+  margin-right: 7px;
+  font-weight: 700;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.lease-form {
+  padding: 28px 30px 30px;
+}
+
+.lease-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19px;
+}
+
+.lease-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.lease-form-group.full {
+  grid-column: 1 / -1;
+}
+
+.lease-form-group label {
+  margin-bottom: 8px;
+  color: #69645d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.lease-form-group input,
+.lease-form-group select {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid #dcd7d0;
+  border-radius: 3px;
+  outline: none;
+  background: white;
+  color: #2f2d29;
+  font-size: 12px;
+}
+
+.lease-form-group input:focus,
+.lease-form-group select:focus {
+  border-color: #8e8170;
+}
+
+.lease-form-group input::placeholder {
+  color: #aaa49d;
+}
+
+/* =========================================
+   MONEY INPUT
+========================================= */
+
+.money-input {
+  position: relative;
+}
+
+.money-input > span {
+  position: absolute;
+  left: 13px;
+  top: 12px;
+  color: #81796f;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.money-input input {
+  padding-left: 30px;
+}
+
+/* =========================================
+   MODAL ACTIONS
+========================================= */
+
+.lease-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e8e4de;
+}
+
+.lease-cancel-button,
+.lease-save-button {
+  height: 43px;
+  padding: 0 20px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.lease-cancel-button {
+  border: 1px solid #d6d1ca;
+  background: white;
+  color: #67625b;
+}
+
+.lease-cancel-button:hover {
+  background: #f5f2ee;
+}
+
+.lease-save-button {
+  border: none;
+  background: #24231f;
+  color: white;
+}
+
+.lease-save-button:hover {
+  background: #3b3934;
+}
+
+.lease-cancel-button:disabled,
+.lease-save-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .lease-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .lease-toolbar-right {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .lease-page-header {
+    padding: 30px;
+  }
+
+  .lease-toolbar {
+    padding: 20px 30px;
+  }
+
+  .lease-table-card {
+    margin: 0 30px;
+  }
+
+  .lease-back-button {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .lease-page-header {
+    padding: 25px 20px;
+  }
+
+  .lease-page-header h2 {
+    font-size: 32px;
+  }
+
+  .lease-header-mark {
+    display: none;
+  }
+
+  .lease-toolbar {
+    padding: 18px 20px;
+  }
+
+  .lease-search {
+    width: 100%;
+  }
+
+  .lease-toolbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .lease-table-card {
+    margin: 0 20px;
+  }
+
+  .lease-table-header {
+    padding: 20px;
+  }
+
+  .lease-back-button {
+    margin-left: 20px;
+  }
+
+  .lease-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lease-form-group.full {
+    grid-column: auto;
+  }
+}

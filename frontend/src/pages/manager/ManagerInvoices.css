@@ -1,0 +1,255 @@
+.invoice-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0 14px;
+}
+
+.search-box span {
+  font-size: 20px;
+  color: #9ca3af;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 13px 0;
+  font-size: 14px;
+}
+
+.invoice-controls select {
+  min-width: 190px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0 14px;
+  background: white;
+  font-size: 14px;
+}
+
+.invoice-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.invoice-table-card {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.table-heading {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-heading h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.table-heading span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.invoice-table-wrapper {
+  overflow-x: auto;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1050px;
+}
+
+.invoice-table th {
+  text-align: left;
+  padding: 14px 18px;
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.invoice-table td {
+  padding: 16px 18px;
+  border-top: 1px solid #f0f0f0;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.invoice-shop,
+.invoice-tenant {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.invoice-shop span,
+.invoice-tenant span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.invoice-status {
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.invoice-status.pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.invoice-status.partially-paid {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.invoice-status.paid {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.invoice-status.overdue {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.invoice-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  padding: 7px 11px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edit-button {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.delete-button {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.invoice-empty {
+  padding: 60px 20px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* MODAL */
+
+.invoice-modal {
+  width: min(850px, 94vw);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #111827;
+}
+
+.invoice-total-preview {
+  margin: 0 24px 24px;
+  padding: 18px;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.invoice-total-preview > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: #4b5563;
+}
+
+.invoice-grand-total {
+  margin-top: 10px;
+  padding-top: 14px !important;
+  border-top: 1px solid #d1d5db;
+  font-size: 17px;
+  color: #111827 !important;
+}
+
+@media (max-width: 700px) {
+  .invoice-controls {
+    flex-direction: column;
+  }
+
+  .search-box {
+    max-width: none;
+  }
+
+  .invoice-controls select {
+    height: 45px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,774 @@
+* {
+  box-sizing: border-box;
+}
+
+.tenant-page {
+  min-height: 100vh;
+  background: #f5f6f8;
+  color: #17181c;
+  display: flex;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* SIDEBAR */
+
+.tenant-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #101114;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 18px;
+  z-index: 20;
+}
+
+.tenant-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px 30px;
+}
+
+.tenant-brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: white;
+  color: #101114;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.tenant-brand h1 {
+  margin: 0;
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+
+.tenant-brand span {
+  color: #8e9198;
+  font-size: 11px;
+}
+
+.tenant-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tenant-nav-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #a8abb2;
+  padding: 13px 14px;
+  border-radius: 9px;
+  text-align: left;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  transition: 0.2s;
+}
+
+.tenant-nav-item span {
+  width: 18px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.tenant-nav-item:hover,
+.tenant-nav-item.active {
+  background: #202126;
+  color: white;
+}
+
+.tenant-sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #292a2f;
+  padding-top: 18px;
+}
+
+.tenant-user-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 8px 16px;
+}
+
+.tenant-avatar,
+.tenant-header-avatar {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.tenant-avatar {
+  width: 35px;
+  height: 35px;
+  background: #303238;
+  font-size: 13px;
+}
+
+.tenant-user-mini strong,
+.tenant-user-mini span {
+  display: block;
+}
+
+.tenant-user-mini strong {
+  font-size: 12px;
+}
+
+.tenant-user-mini span {
+  color: #858890;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.tenant-logout {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #90939a;
+  text-align: left;
+  padding: 11px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tenant-logout:hover {
+  color: white;
+}
+
+/* MAIN */
+
+.tenant-main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 38px 44px 30px;
+  max-width: 1700px;
+}
+
+.tenant-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.tenant-eyebrow,
+.tenant-section-label {
+  color: #777b84;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 7px;
+}
+
+.tenant-header h2 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: -0.8px;
+}
+
+.tenant-header > div:first-child > p:last-child {
+  margin: 8px 0 0;
+  color: #777b84;
+  font-size: 13px;
+}
+
+.tenant-header-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid #e5e6e9;
+  border-radius: 12px;
+  padding: 8px 13px 8px 8px;
+}
+
+.tenant-header-avatar {
+  width: 37px;
+  height: 37px;
+  background: #17181c;
+  color: white;
+  font-size: 13px;
+}
+
+.tenant-header-profile strong,
+.tenant-header-profile span {
+  display: block;
+}
+
+.tenant-header-profile strong {
+  font-size: 12px;
+}
+
+.tenant-header-profile span {
+  color: #858890;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+/* STATS */
+
+.tenant-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.tenant-stat-card {
+  background: white;
+  border: 1px solid #e4e5e8;
+  border-radius: 13px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.tenant-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.tenant-stat-icon.blue {
+  background: #edf3ff;
+  color: #3867d6;
+}
+
+.tenant-stat-icon.green {
+  background: #eaf8f0;
+  color: #25864f;
+}
+
+.tenant-stat-icon.orange {
+  background: #fff3e7;
+  color: #b76b22;
+}
+
+.tenant-stat-icon.purple {
+  background: #f1ecff;
+  color: #7251bb;
+}
+
+.tenant-stat-card span,
+.tenant-stat-card strong {
+  display: block;
+}
+
+.tenant-stat-card span {
+  color: #777b84;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.tenant-stat-card strong {
+  font-size: 19px;
+}
+
+/* PANELS */
+
+.tenant-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.tenant-panel {
+  background: white;
+  border: 1px solid #e4e5e8;
+  border-radius: 13px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.tenant-panel-heading {
+  padding: 20px 22px;
+  border-bottom: 1px solid #ededee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tenant-panel-heading h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.tenant-section-label {
+  font-size: 9px;
+  margin-bottom: 5px;
+}
+
+.tenant-live-badge {
+  background: #eaf8f0;
+  color: #247848;
+  border-radius: 20px;
+  padding: 5px 9px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.record-count {
+  color: #858890;
+  font-size: 11px;
+}
+
+/* SHOP */
+
+.shop-card-content {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 22px;
+  padding: 22px;
+}
+
+.shop-visual {
+  min-height: 145px;
+  background: #17181c;
+  border-radius: 10px;
+  color: white;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shop-visual span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  opacity: 0.55;
+}
+
+.shop-visual strong {
+  font-size: 24px;
+}
+
+.shop-details h4 {
+  margin: 0 0 14px;
+  font-size: 22px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #f0f0f1;
+}
+
+.detail-row span {
+  color: #81848b;
+  font-size: 11px;
+}
+
+.detail-row strong {
+  font-size: 12px;
+}
+
+/* LEASE */
+
+.lease-details {
+  padding: 22px;
+}
+
+.lease-number {
+  background: #f6f7f9;
+  border-radius: 9px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+}
+
+.lease-number span,
+.lease-number strong {
+  display: block;
+}
+
+.lease-number span {
+  color: #858890;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.lease-number strong {
+  font-size: 13px;
+}
+
+.lease-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+}
+
+.lease-grid > div span,
+.lease-grid > div strong {
+  display: block;
+}
+
+.lease-grid > div span {
+  color: #858890;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.lease-grid > div strong {
+  font-size: 12px;
+}
+
+/* STATUS */
+
+.status-badge {
+  display: inline-block !important;
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 9px !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-badge.paid,
+.status-badge.success,
+.status-badge.active {
+  background: #eaf8f0;
+  color: #267b4a;
+}
+
+.status-badge.pending,
+.status-badge.partially-paid,
+.status-badge.expiring-soon {
+  background: #fff4e6;
+  color: #ae681f;
+}
+
+.status-badge.overdue,
+.status-badge.failed,
+.status-badge.terminated {
+  background: #ffeded;
+  color: #b54141;
+}
+
+.status-badge.expired,
+.status-badge.refunded {
+  background: #eeeeef;
+  color: #666971;
+}
+
+/* INVOICE SUMMARY */
+
+.invoice-summary-panel {
+  margin-bottom: 18px;
+}
+
+.invoice-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 20px 22px;
+}
+
+.invoice-summary-grid > div {
+  padding: 3px 20px;
+  border-right: 1px solid #ececee;
+}
+
+.invoice-summary-grid > div:first-child {
+  padding-left: 0;
+}
+
+.invoice-summary-grid > div:last-child {
+  border-right: none;
+}
+
+.invoice-summary-grid span,
+.invoice-summary-grid strong {
+  display: block;
+}
+
+.invoice-summary-grid span {
+  color: #858890;
+  font-size: 10px;
+  margin-bottom: 6px;
+}
+
+.invoice-summary-grid strong {
+  font-size: 18px;
+}
+
+.text-green {
+  color: #27804c;
+}
+
+.text-orange {
+  color: #b66b21;
+}
+
+.text-red {
+  color: #bd4141;
+}
+
+/* TABLES */
+
+.tenant-table-wrapper {
+  overflow-x: auto;
+}
+
+.tenant-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.tenant-table th {
+  background: #fafafa;
+  color: #7c7f87;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: left;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e9e9eb;
+}
+
+.tenant-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f1;
+  font-size: 11px;
+}
+
+.tenant-table tbody tr:hover {
+  background: #fafbfc;
+}
+
+.tenant-table td strong {
+  font-size: 11px;
+}
+
+.table-shop strong,
+.table-shop span {
+  display: block;
+}
+
+.table-shop span {
+  color: #8a8d94;
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+.payment-method {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.tenant-table code {
+  font-size: 9px;
+  color: #6d7078;
+}
+
+.table-empty {
+  text-align: center;
+  color: #858890;
+  padding: 35px !important;
+}
+
+/* PROFILE */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 5px 22px 22px;
+}
+
+.profile-field {
+  padding: 17px 20px 13px 0;
+  border-bottom: 1px solid #ededee;
+}
+
+.profile-field span,
+.profile-field strong {
+  display: block;
+}
+
+.profile-field span {
+  color: #858890;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.profile-field strong {
+  font-size: 12px;
+  word-break: break-word;
+}
+
+/* FOOTER */
+
+.tenant-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #92959c;
+  font-size: 10px;
+  padding: 10px 2px 20px;
+}
+
+/* LOADING */
+
+.tenant-loading,
+.tenant-error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f5f6f8;
+  color: #555860;
+}
+
+.tenant-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #dddfe3;
+  border-top-color: #17181c;
+  border-radius: 50%;
+  animation: tenant-spin 0.8s linear infinite;
+  margin-bottom: 12px;
+}
+
+.tenant-loading p {
+  font-size: 12px;
+}
+
+.tenant-error-page h2 {
+  color: #17181c;
+  margin-bottom: 5px;
+}
+
+.tenant-error-page p {
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.tenant-error-page button {
+  border: none;
+  background: #17181c;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+@keyframes tenant-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .tenant-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tenant-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .invoice-summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .invoice-summary-grid > div {
+    border-right: none;
+    padding: 0;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .tenant-sidebar {
+    width: 70px;
+    padding: 20px 10px;
+  }
+
+  .tenant-brand {
+    justify-content: center;
+    padding: 0 0 25px;
+  }
+
+  .tenant-brand > div:last-child,
+  .tenant-nav-item:not(.active)::after,
+  .tenant-nav-item {
+    font-size: 0;
+  }
+
+  .tenant-nav-item span {
+    font-size: 15px;
+  }
+
+  .tenant-nav-item {
+    justify-content: center;
+    padding: 13px 8px;
+  }
+
+  .tenant-user-mini div:last-child,
+  .tenant-logout {
+    display: none;
+  }
+
+  .tenant-main {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+    padding: 25px 18px;
+  }
+
+  .tenant-header-profile {
+    display: none;
+  }
+
+  .tenant-header h2 {
+    font-size: 24px;
+  }
+
+  .tenant-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .invoice-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}

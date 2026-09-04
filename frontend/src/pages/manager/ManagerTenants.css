@@ -1,0 +1,682 @@
+/* =========================================
+   TENANT PAGE
+========================================= */
+
+.tenant-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 42px 48px 36px;
+  border-bottom: 1px solid #e7e4df;
+}
+
+.tenant-page-header h2 {
+  margin: 8px 0 14px;
+  font-size: 42px;
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.tenant-page-header h2 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.tenant-description {
+  margin: 0;
+  max-width: 520px;
+  color: #77736d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.tenant-header-mark {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 110px;
+  line-height: 0.8;
+  color: #e9e5df;
+  padding-right: 15px;
+}
+
+.tenant-header-mark span {
+  color: #b7a58e;
+}
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.tenant-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 25px 48px;
+}
+
+.tenant-search {
+  position: relative;
+  width: min(520px, 100%);
+}
+
+.tenant-search input {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 0 42px;
+  border: 1px solid #ddd9d2;
+  border-radius: 4px;
+  background: #fff;
+  color: #292722;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.tenant-search input:focus {
+  border-color: #8f8170;
+}
+
+.tenant-search input::placeholder {
+  color: #9a958e;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+  font-size: 21px;
+  color: #77736d;
+  z-index: 2;
+}
+
+.clear-search {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  color: #77736d;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.tenant-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tenant-count {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  color: #77736d;
+  white-space: nowrap;
+}
+
+.tenant-add-button {
+  height: 46px;
+  padding: 0 21px;
+  border: none;
+  border-radius: 3px;
+  background: #24231f;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.tenant-add-button:hover {
+  background: #3b3934;
+  transform: translateY(-1px);
+}
+
+.tenant-add-button span {
+  font-size: 18px;
+  margin-right: 8px;
+  vertical-align: -1px;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.tenant-error {
+  margin: 0 48px 20px;
+  padding: 13px 16px;
+  border: 1px solid #e6caca;
+  background: #fff5f5;
+  color: #9b4545;
+  font-size: 13px;
+}
+
+.tenant-error span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #9b4545;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.tenant-table-card {
+  margin: 0 48px;
+  background: #fff;
+  border: 1px solid #e4e0da;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tenant-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 26px;
+  border-bottom: 1px solid #e8e4de;
+}
+
+.tenant-table-header h3 {
+  margin: 5px 0 0;
+  font-size: 21px;
+  font-weight: 600;
+  color: #282620;
+}
+
+.card-eyebrow {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #9a8976;
+}
+
+.tenant-total-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #8d8982;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.tenant-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tenant-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.tenant-table th {
+  padding: 15px 22px;
+  text-align: left;
+  background: #f8f6f3;
+  border-bottom: 1px solid #e4e0da;
+  color: #77736d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.tenant-table td {
+  padding: 17px 22px;
+  border-bottom: 1px solid #ece9e4;
+  color: #36342f;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.tenant-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tenant-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.tenant-table tbody tr:hover {
+  background: #fbfaf8;
+}
+
+/* =========================================
+   TENANT IDENTITY
+========================================= */
+
+.tenant-identity {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 190px;
+}
+
+.tenant-avatar-large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #eeeae4;
+  color: #60594f;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tenant-identity strong {
+  display: block;
+  color: #282620;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tenant-identity span {
+  display: block;
+  margin-top: 4px;
+  color: #99948d;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+}
+
+/* =========================================
+   COMPANY
+========================================= */
+
+.company-name {
+  color: #45423c;
+  font-size: 13px;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-info span {
+  display: block;
+  color: #45423c;
+  font-size: 13px;
+}
+
+.contact-info small {
+  display: block;
+  margin-top: 5px;
+  color: #98938c;
+  font-size: 11px;
+}
+
+/* =========================================
+   GST
+========================================= */
+
+.gst-number {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  color: #666159;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.tenant-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tenant-edit-button,
+.tenant-delete-button {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tenant-edit-button {
+  border: 1px solid #d4cec5;
+  background: white;
+  color: #4d4942;
+}
+
+.tenant-edit-button:hover {
+  background: #f3f0eb;
+}
+
+.tenant-delete-button {
+  border: 1px solid #ead1d1;
+  background: white;
+  color: #a04b4b;
+}
+
+.tenant-delete-button:hover {
+  background: #fff1f1;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.tenant-empty {
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #f0ece7;
+  color: #766d62;
+  font-size: 22px;
+}
+
+.tenant-empty h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.tenant-empty p {
+  margin: 0 0 20px;
+  color: #8a857e;
+  font-size: 13px;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.tenant-back-button {
+  margin: 25px 48px 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #716a61;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+}
+
+.tenant-back-button span {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.tenant-back-button:hover {
+  color: #24231f;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.tenant-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(25, 24, 21, 0.58);
+}
+
+.tenant-modal {
+  width: min(650px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+}
+
+.tenant-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 27px 30px 24px;
+  border-bottom: 1px solid #e7e3dd;
+}
+
+.tenant-modal-header h2 {
+  margin: 7px 0 7px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #282620;
+}
+
+.tenant-modal-header p:last-child {
+  margin: 0;
+  color: #88837c;
+  font-size: 12px;
+}
+
+.tenant-modal-close {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: #777169;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.tenant-modal-close:hover {
+  color: #22211e;
+}
+
+/* =========================================
+   MODAL ERROR
+========================================= */
+
+.tenant-modal-error {
+  margin: 20px 30px 0;
+  padding: 12px 14px;
+  background: #fff4f4;
+  border: 1px solid #ead0d0;
+  color: #9d4b4b;
+  font-size: 12px;
+}
+
+.tenant-modal-error span {
+  margin-right: 7px;
+  font-weight: 700;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.tenant-form {
+  padding: 28px 30px 30px;
+}
+
+.tenant-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.tenant-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.tenant-form-group.full {
+  grid-column: 1 / -1;
+}
+
+.tenant-form-group label {
+  margin-bottom: 8px;
+  color: #69645d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.tenant-form-group input {
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #dcd7d0;
+  border-radius: 3px;
+  outline: none;
+  background: white;
+  color: #2f2d29;
+  font-size: 13px;
+}
+
+.tenant-form-group input:focus {
+  border-color: #8e8170;
+}
+
+.tenant-form-group input::placeholder {
+  color: #aaa49d;
+}
+
+/* =========================================
+   MODAL ACTIONS
+========================================= */
+
+.tenant-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e8e4de;
+}
+
+.tenant-cancel-button,
+.tenant-save-button {
+  height: 43px;
+  padding: 0 20px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.tenant-cancel-button {
+  border: 1px solid #d6d1ca;
+  background: white;
+  color: #67625b;
+}
+
+.tenant-cancel-button:hover {
+  background: #f5f2ee;
+}
+
+.tenant-save-button {
+  border: none;
+  background: #24231f;
+  color: white;
+}
+
+.tenant-save-button:hover {
+  background: #3b3934;
+}
+
+.tenant-cancel-button:disabled,
+.tenant-save-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .tenant-page-header {
+    padding: 30px;
+  }
+
+  .tenant-toolbar {
+    padding: 20px 30px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tenant-search {
+    width: 100%;
+  }
+
+  .tenant-toolbar-right {
+    justify-content: space-between;
+  }
+
+  .tenant-table-card {
+    margin: 0 30px;
+  }
+
+  .tenant-back-button {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .tenant-page-header {
+    padding: 25px 20px;
+  }
+
+  .tenant-page-header h2 {
+    font-size: 32px;
+  }
+
+  .tenant-header-mark {
+    display: none;
+  }
+
+  .tenant-toolbar {
+    padding: 18px 20px;
+  }
+
+  .tenant-table-card {
+    margin: 0 20px;
+  }
+
+  .tenant-table-header {
+    padding: 20px;
+  }
+
+  .tenant-back-button {
+    margin-left: 20px;
+  }
+
+  .tenant-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tenant-form-group.full {
+    grid-column: auto;
+  }
+}
