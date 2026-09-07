@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./ManagerDashboard.css";
 import "./ManagerPayments.css";
 
-const API = "http://127.0.0.1:8001";
+const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:8001";
 
 function ManagerPayments() {
   const navigate = useNavigate();

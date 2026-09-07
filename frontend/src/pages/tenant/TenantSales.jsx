@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./TenantSales.css";
 
-const API_BASE = "http://127.0.0.1:8001";
+const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8001";
 
 const formatCurrency = (value) =>
   `₹${Number(value || 0).toLocaleString("en-IN", {
