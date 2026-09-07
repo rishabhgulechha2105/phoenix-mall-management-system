@@ -42,6 +42,7 @@ app.add_middleware(
         "http://localhost:5173",
         "http://localhost:5174",
         "http://localhost:5175",
+        "https://phoenix-mall-management-system.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
