@@ -23,7 +23,24 @@ The system provides:
 The application separates internal mall operations from customer-facing information while maintaining relationships between shops, tenants, leases, invoices, payments, and retail transactions.
 
 ---
+## 📸 Screenshots
 
+### PHOENIX Public Website
+![PHOENIX Public Website](screenshots/homepage.png)
+
+### Manager Dashboard
+![Manager Dashboard](screenshots/manager-dashboard.png)
+
+### Tenant Portal
+![Tenant Portal](screenshots/tenant-dashboard.png)
+
+### Retail Sales Management
+![Retail Sales Management](screenshots/retail-sales.png)
+
+### Reports & Analytics
+![Reports & Analytics](screenshots/reports.png)
+
+---
 ## ✨ Key Features
 
 ### 🌐 Public Website
